@@ -8,8 +8,10 @@
       </li>
       {{/each}}
   </ul>
-  {{#link-to "list.new"}}
-    <div class="nav-list__item add-new">Add New List</div>
-  {{/link-to}}
+    <div class="nav-list__item add-new">
+      {{#link-to "list.new"}}
+      Add New List
+      {{/link-to}}
+    </div>
 </div>
 {{outlet}}
