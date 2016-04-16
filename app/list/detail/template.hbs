@@ -5,7 +5,7 @@
   <div class="reminder-container">
     <ul class="reminder-list">
       <li class="reminder-list__item">
-        {{#each model.reminder as |reminder|}}
+        {{#each model.reminders as |reminder|}}
         {{input type="checkbox" class="reminder-list__item__check"}}
           {{reminder.done}}
           {{reminder.name}}
