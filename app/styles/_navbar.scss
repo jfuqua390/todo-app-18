@@ -30,6 +30,7 @@
     display: none;
   }
 
+
   &__item {
     min-width: 10rem;
     flex-grow: 1;
@@ -39,14 +40,12 @@
     border-bottom: 3px solid $brand-blue;
     color: darken($title-white, 15%);
     padding-top: 1rem;
-
-    &:hover {
-      cursor: pointer;
+  }
+    :focus {
       border-bottom: 3px solid $brand-yellow;
-      background-color: $hover-color;
+      background: $hover-color;
       color: $title-white;
     }
-  }
 }
 
 .add-new {
