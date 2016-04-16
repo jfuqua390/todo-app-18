@@ -2,8 +2,8 @@
   width: 100%;
   background-color: $brand-blue;
   color: $title-white;
-  font-family: Roboto;
-  box-shadow: 0px 0px 15px $brand-text;
+  box-shadow: 0px 40px 25px $brand-text;
+
 }
 
 .nav-logo {
@@ -18,6 +18,7 @@
 
 .nav-bottom {
   display: flex;
+  background-color: $brand-blue;
 }
 .nav-list {
   display: flex;

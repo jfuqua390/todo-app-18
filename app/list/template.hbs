@@ -1,0 +1,15 @@
+<div class="nav-bottom">
+  <ul class="nav-list">
+    {{#each model as |todo|}}
+      <li class="nav-list__item">
+        {{#link-to "list.detail" todo.id}}
+        {{todo.title}}
+        {{/link-to}}
+      </li>
+      {{/each}}
+  </ul>
+  {{#link-to "list.new"}}
+    <div class="nav-list__item add-new">Add New List</div>
+  {{/link-to}}
+</div>
+{{outlet}}
