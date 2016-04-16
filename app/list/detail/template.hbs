@@ -5,13 +5,16 @@
   <div class="reminder-container">
     <ul class="reminder-list">
       <li class="reminder-list__item">
+        {{#each model.reminder as |reminder|}}
         {{input type="checkbox" class="reminder-list__item__check"}}
-        {{model.reminder}}
+          {{reminder.done}}
+          {{reminder.name}}
+        {{/each}}
       </li>
 
     </ul>
     <form {{action saveReminder model newReminder on="submit"}} class="newrem__form">
-      {{input type="text" placeholder="What do you want to do?" value=newReminder.description class="list__input"}}
+      {{input type="text" placeholder="What do you want to do?" value=newReminder.name class="list__input"}}
       <button class="newrem__accept">ACCEPT</button>
     </form>
   </div>
