@@ -51,4 +51,9 @@
 .add-new {
   width: 15%;
   margin: 0 0.8rem;
+  :focus {
+    border-bottom: 3px solid $brand-yellow;
+    background: $hover-color;
+    color: $title-white;
+  }
 }

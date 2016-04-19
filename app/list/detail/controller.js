@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   newReminder: {
-    done: false,
     name: ``,
+    done: false,
   },
   saveReminder(list, attrs) {
     console.log(attrs);
@@ -12,7 +12,6 @@ export default Ember.Controller.extend({
 
     reminder.save().then(() => {
       this.set(`newReminder`, {
-        done: false,
         name: ``,
       });
     });

@@ -5,6 +5,5 @@ import { belongsTo } from 'ember-data/relationships';
 export default Model.extend({
   done: attr(),
   name: attr(),
-
   list: belongsTo(`list`),
 });
