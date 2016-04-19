@@ -1,20 +1,31 @@
 {{outlet}}
 <div class="list-container">
   <h2 class="list__title">{{model.title}}</h2>
-  <div class="reminder-container">
-    <ul class="reminder-list">
-      <li class="reminder-list__item">
+  <div class="box-container">
+    <button class="form-delete" {{action deleteList model on="click"}}>X</button>
+    <div class="reminder-container">
+      <ul class="reminder-list">
         {{#each model.reminders as |reminder|}}
-        {{input type="checkbox" class="reminder-list__item__check"}}
-          {{reminder.done}}
-          {{reminder.name}}
+        <li class="reminder-list__item" {{action isComplete reminder reminder.done on="click"}}>
+          {{#if reminder.done}}
+            <span class="item-complete">
+              {{fa-icon "fa-check-square-o"}}
+              {{reminder.name}}
+            </span>
+          {{else}}
+            <span class="item-incomplete">
+              {{fa-icon "fa-square-o"}}
+              {{reminder.name}}
+            </span>
+          {{/if}}
+        </li>
         {{/each}}
-      </li>
 
-    </ul>
-    <form {{action saveReminder model newReminder on="submit"}} class="newrem__form">
-      {{input type="text" placeholder="What do you want to do?" value=newReminder.name class="list__input"}}
-      <button class="newrem__accept">ACCEPT</button>
-    </form>
+      </ul>
+      <form {{action saveReminder model newReminder on="submit"}} class="newrem__form">
+        {{input type="text" placeholder="What do you want to do?" value=newReminder.name class="list__input"}}
+        <button class="newrem__accept">ACCEPT</button>
+      </form>
+    </div>
   </div>
 </div>

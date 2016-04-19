@@ -7,11 +7,25 @@
   margin: 2rem 0 0.5rem;
 }
 
+.box-container {
+  box-shadow: 3px 3px 25px #828282;
+  padding: 1rem 0 0;
+  position: relative;
+}
+
+.form-delete {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .reminder-container {
   display: flex;
   flex-direction: column;
-  box-shadow: 3px 3px 25px #828282;
-  padding: 1rem 0 0;
+
 }
 
 .reminder-list {
@@ -25,7 +39,7 @@
   border: 0;
   border-bottom: 1px solid #E5E5E5;
   margin: 1rem;
-  font-size: 1rem
+  font-size: 1rem;
 }
 
 .newrem__accept {
@@ -40,4 +54,15 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.item-complete {
+  text-decoration: line-through;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.item-incomplete:hover {
+  cursor: pointer;
 }

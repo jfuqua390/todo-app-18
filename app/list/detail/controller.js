@@ -16,4 +16,14 @@ export default Ember.Controller.extend({
       });
     });
   },
+  isComplete(reminder, done) {
+    reminder.set(`done`, !done);
+    reminder.save();
+  },
+  deleteList(list) {
+    if (window.confirm(`Are you sure you want to delete this list?`)) {
+      list.destroyRecord();
+      this.transitionToRoute(`list`);
+    }
+  },
 });
