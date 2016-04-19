@@ -7,6 +7,8 @@ export default Ember.Controller.extend({
     const list = this.store.createRecord(`list`, attrs);
 
   // Save list model
-    list.save();
+    list.save().then(() => {
+      this.transitionToRoute(`list.detail`, list.id);
+    });
   },
 });
