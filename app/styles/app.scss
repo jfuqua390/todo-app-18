@@ -1,0 +1,24 @@
+@import "yoga";
+@import "variables";
+@import "navbar";
+@import 'newlist';
+@import 'listdeets';
+
+// Uncomment this for working with yoga prototyping
+// http://rtablada.github.io/yoga-sass/#mixin-yoga-prototype
+// @include yoga-prototype();
+
+body {
+  margin: 0;
+  font-family: Roboto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,68 @@
+.list-container {
+  width: 60%;
+  margin: auto;
+}
+
+.list__title {
+  margin: 2rem 0 0.5rem;
+}
+
+.box-container {
+  box-shadow: 3px 3px 25px #828282;
+  padding: 1rem 0 0;
+  position: relative;
+}
+
+.form-delete {
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.reminder-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.reminder-list {
+  margin: 0;
+}
+
+.list__input {
+  width: 80%;
+  background: none;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #E5E5E5;
+  margin: 1rem;
+  font-size: 1rem;
+}
+
+.newrem__accept {
+  width: 10%;
+  align-self: flex-end;
+  border: 0;
+  background: transparent;
+  color: $brand-blue;
+  font-size: 0.9rem;
+  margin-right: 1.2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.item-complete {
+  text-decoration: line-through;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.item-incomplete:hover {
+  cursor: pointer;
+}
